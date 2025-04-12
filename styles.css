@@ -1,0 +1,302 @@
+
+/* Algemene stijlen     */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .tagline {
+    font-style: italic;
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer span {
+    font-size: 1rem;
+}
+
+
+/* Algemene secties     */
+
+section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    color: #555;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+/* Afbeeldingen         */
+
+.section-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+
+/* Homepagina           */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.intro {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.specialisatie {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 3px solid #4CAF50;
+}
+
+.toonvorming {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-top: 3px solid #4CAF50;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .specialisatie,
+    .toonvorming {
+        grid-column: span 2;
+    }
+}
+
+
+/* Over ons pagina      */
+
+.intro-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+    }
+    .section-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1rem;
+    }
+}
+
+/* Contactpagina        */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.adresgegevens iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-formulier {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+
+/* Mediaquery's         */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header .tagline {
+        font-size: 1rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    main {
+        padding: 10px;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .adresgegevens,
+    .contact-formulier {
+        padding: 1rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 0.5rem;
+    }
+    .form-group button {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
